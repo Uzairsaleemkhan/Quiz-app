@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|PT+Serif:700"); 
+:root{
+    --main-font-color:#1a1a1a;
+    --main-bg-color:white;
+    --main-theme-color:rgb(243,168,47);
+    --light-white:#f5f5f5;
+    --light-grey:#ccc;
+    --light-black:#282a39;
+    --font-body-stack:Raleway,Charcoal,sans-serif;
+    --font-heading-stack:"PT Serif",sans-serif;
+    --container-width:769px; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: var(--container-width);
+    margin-right: auto;
+    margin-left: auto ;
+}
+
+.button{
+    padding: 1rem 3.8rem;
+    text-transform: uppercase;
+    border: none ;
+    transition: 0.3s all ease ;
+    outline:0;
+    font-weight: bold;
+    opacity: 0.9;
+}
+.button:hover{
+color: var(--light-white);
+background-color: var(--light-black);
+}
+.button.button--bordered{
+    border: 1px solid var(--light-black);
+}
+.jabquiz{
+    padding: 2rem 1.4rem;
+}
+.jabquiz__question-box{
+    text-align: center;
+}
+.jabquiz__question{
+    font-family: var(--font-heading-stack);
+    font-weight: bold;
+    padding: .8rem 4rem;
+    color: var(--main-font-color);
+    letter-spacing: 1.5px;
+}
+.jabquiz__tracker{
+    font-family: var(--font-body-stack);
+    color: var(--light-black);
+    padding: 1rem ;
+}
+.jabquiz__tagline{
+    font-family: var(--font-body-stack);
+    color: var(--light-grey);
+    font-size: 1.4rem;
+}
+.jabquiz__progress{
+    width: 50%;
+    border-radius: 4px;
+    background-color: var(--light-white );
+    margin: 2rem auto;
+}
+.progress__inner{
+    width: 20%;
+    height: 5px;
+    background-color: var(--main-theme-color);
+}
+.jabquiz__choices{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+.jabquiz__choice{
+    min-width: 300px;
+    margin: .5rem auto;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    background-color: var(--light-white);
+    color: var(--light-black);
+    display: block;
+    font-size: .86rem;
+    letter-spacing: 1.2px;
+}
+.jabquiz__label{
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+.jabquiz__choices input{
+    opacity: 0;
+}
+.jabquiz__label__i{
+    font-size: 1rem;
+    border-radius: 49%;
+    color: #1a1a1a00;
+    border:3px solid var(--main-theme-color);
+    padding: .1rem;
+    position: relative;
+    left: -5px;
+    margin-right: 1rem;
+    display: inline-block  ;
+}
+.jabquiz__input:checked + label i {
+    color: var(--light-white);
+    background-color: var(--main-theme-color);
+}
+.jabquiz__input:checked + label{
+    color: var(--main-theme-color);
+}
+.jabquiz__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
